@@ -10,20 +10,24 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                        
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input id="fname" type="text" class="form-control" name="first_name" required autocomplete="first-name">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="fname" type="text" class="form-control" name="last_name" required autocomplete="last-name">
+                            </div>
+                        </div>
+
+
+                       
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -60,6 +64,16 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="text" class="col-md-4 col-form-label text-md-right">{{ __('Position') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="position" type="text" class="form-control" name="postion" required autocomplete="position">
+                            </div>
+                        </div>
+
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
